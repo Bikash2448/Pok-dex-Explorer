@@ -1,0 +1,21 @@
+.Mainbox{
+    height: 320px;
+    width: 280px;
+    border: 2px solid rgb(95, 114, 121);
+    border-radius: 10px;
+    margin: 4px;
+    
+}
+.name{
+    color: black;
+    letter-spacing: 8px;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+
+}
+div>img{
+    height: 100%;
+    width: 100%;
+    
+}

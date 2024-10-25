@@ -1,0 +1,28 @@
+.pokemon-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.pokemon-button{
+    gap: 20px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prev {
+    padding: 4px 8px;
+    font-weight: bold;
+    font-size: medium;
+    border-radius: 4px;
+    background-color: rgb(80, 92, 92);
+    border: 1px solid rgb(32, 31, 31);
+}
+.next{
+    padding:4px 8px;
+    font-weight: bold;
+    font-size: medium;
+    border-radius: 4px;
+    background-color: rgb(80, 92, 92);
+    border: 1px solid rgb(32, 31, 31);
+}
