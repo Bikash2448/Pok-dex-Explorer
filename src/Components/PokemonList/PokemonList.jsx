@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axois from "axios"
 import Pokemon from "../pokemon/pokemon";
+// import Pokedesk from "../Poke Box/Pokedesk";
 import './pokemonlist.css'
 
 function Pokemonlist(){
@@ -10,7 +11,7 @@ function Pokemonlist(){
     const [pokedesk_url,setpokedesk_url] = useState("https://pokeapi.co/api/v2/pokemon")
     const [next, setnext] = useState('')
     const [prev,setprev] = useState('')
-    console.log(pokedesk_url)
+    // console.log(pokedesk_url)
 
     async function DownloadPokemon(){
         setisloading(true);

@@ -1,9 +1,24 @@
 .Pokedesk_Wrapper{
-    height: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     /* margin: 20px; */
     background-color: rgb(225, 222, 222);
     /* justify-content: center; */
     align-items: center;
+}
+@media screen and (max-width: 768px) {
+    .Pokedesk_Wrapper {
+        height: auto;      /* Allow content to define height */
+        padding: 15px;
+        gap: 15px;
+    }
+}
+
+/* Responsive for mobile devices (480px and smaller) */
+@media screen and (max-width: 480px) {
+    .Pokedesk_Wrapper {
+        padding: 10px;
+        gap: 10px;
+    }
 }

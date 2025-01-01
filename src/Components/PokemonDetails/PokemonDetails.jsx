@@ -3,21 +3,33 @@ import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./pokemondetails.css"
 
-function PokemonDetails(){
+function PokemonDetails({pokemonName}){
     const {id} = useParams()
     const [pokemon,setpokemon] = useState("")
-    async function Downloadpokedetails() {
-        const response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
-        console.log(response.data)
-        setpokemon({
-            name:response.data.name,
-            image: response.data.sprites.other.dream_world.front_default,
-            height: response.data.height,
-            weight : response.data.weight,
-            types : response.data.types.map((t)=>t.type.name)
-        })
+    // console.log(pokemonName)
+    let response;
+    
+        async function Downloadpokedetails() {
+            try{
+                if(pokemonName){
+                    response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`)
+                    console.log(response.data)
+                }else{
+                response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+                }
+                setpokemon({
+                    name:response.data.name,
+                    image: response.data.sprites.other.dream_world.front_default,
+                    height: response.data.height,
+                    weight : response.data.weight,
+                    types : response.data.types.map((t)=>t.type.name)
+                })
+            }
+            catch(e){
+                console.log("Error")
+            }
     }
-
+    
     useEffect(()=>{
         Downloadpokedetails()
     },[])

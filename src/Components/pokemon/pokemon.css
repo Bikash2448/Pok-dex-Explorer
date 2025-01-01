@@ -19,3 +19,28 @@ div>img{
     width: 100%;
     
 }
+@media screen and (max-width: 768px) {
+    .Mainbox {
+        height: 250px;
+        width: 200px;
+        margin: 6px;
+    }
+    
+    .name {
+        font-size: medium;
+        letter-spacing: 4px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Mainbox {
+        height: 200px;
+        width: 160px;
+        margin: 4px;
+    }
+
+    .name {
+        font-size: small;
+        letter-spacing: 3px;
+    }
+}
